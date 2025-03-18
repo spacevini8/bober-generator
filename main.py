@@ -24,20 +24,32 @@ elif kurwa_select == "N" or kurwa_select == "n" or kurwa_select == "":
 # Temporary name list, waiting for Leonard to provide the real ones
 # Do your homework quicker bruh
 
-animal_names=("Bóbr",
-              "Ratatuj",
-              "Skunks",
-              "Chomik",
-              "Pingvin",
-              "Krt",
-              "Pies",
-              "Forfiter",
-              "Borsuk",
-              "Jezyk")
+while True:
 
-selected_animal = random.choice(animal_names)
+    animal_names=("Bóbr",
+                "Ratatuj",
+                "Skunks",
+                "Chomik",
+                "Pingvin",
+                "Krt",
+                "Pies",
+                "Forfiter",
+                "Borsuk",
+                "Jezyk")
 
-if kurwa_mode == True:
-    print("kurwa " + selected_animal + "!")
-elif kurwa_mode == False:
-    print(selected_animal)
+    selected_animal = random.choice(animal_names)
+
+    if kurwa_mode == True:
+        print("kurwa " + selected_animal + "!")
+        print("")
+    elif kurwa_mode == False:
+        print(selected_animal)
+        print("")
+
+    again = input("Again (Y/n)? ")
+
+    if again == "Y" or again == "y" or again == "":
+        print("")
+        continue
+    elif again == "N" or again == "n":
+        break
