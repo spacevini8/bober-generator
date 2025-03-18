@@ -7,11 +7,19 @@ print("In loving memory of my sanity")
 print("Thanks to Daniel for the idea")
 print("Thanks to Leonard for the names")
 print("#################################################")
+
+kurwa_select = input("Kurwa mode (Y/n)? ")
+
 print("")
 print("THE ANIMAL IS:")
 print("")
 
 kurwa_mode = False
+
+if kurwa_select == "Y" or kurwa_select == "y":
+    kurwa_mode = True
+elif kurwa_select == "N" or kurwa_select == "n" or kurwa_select == "":
+    kurwa_mode = False
 
 # Temporary name list, waiting for Leonard to provide the real ones
 # Do your homework quicker bruh
