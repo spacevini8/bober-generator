@@ -16,7 +16,16 @@ kurwa_mode = False
 # Temporary name list, waiting for Leonard to provide the real ones
 # Do your homework quicker bruh
 
-animal_names=("Bóbr","Ratatuj","Skunks","Chomik","Pingvin","Krt","Pies","Forfiter","Borsuk","Jezyk")
+animal_names=("Bóbr",
+              "Ratatuj",
+              "Skunks",
+              "Chomik",
+              "Pingvin",
+              "Krt",
+              "Pies",
+              "Forfiter",
+              "Borsuk",
+              "Jezyk")
 
 selected_animal = random.choice(animal_names)
 
