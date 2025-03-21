@@ -9,20 +9,24 @@ print("Thanks to Daniel for the idea")
 print("Thanks to Leonard for the names")
 print("#################################################")
 
-kurwa_select = input("Kurwa mode (Y/n)? ")
+family_select = input("Family friendly mode ((default) Y/ n)? ")
 
-print("")
-print("THE ANIMAL IS:")
-print("")
-
-kurwa_mode = False
-
-if kurwa_select == "Y" or kurwa_select == "y":
-    kurwa_mode = True
-elif kurwa_select == "N" or kurwa_select == "n" or kurwa_select == "":
-    kurwa_mode = False
+family_mode = False
+stop = False
 
 while True:
+
+    if family_select == "Y" or family_select == "y" or family_select == "":
+        family_mode = False
+    elif family_select == "N" or family_select == "n":
+        family_mode = True
+    else:
+        print("invalid input")
+        break
+
+    print("")
+    print("THE ANIMAL IS:")
+    print("")
 
     animal_names=("Bóbr",
                 "Pingwin",
@@ -45,14 +49,14 @@ while True:
 
     selected_animal = random.choice(animal_names)
 
-    if kurwa_mode == True:
+    if family_mode == True:
         print("kurwa " + selected_animal + "!")
         print("")
-    elif kurwa_mode == False:
+    elif family_mode == False:
         print(selected_animal)
         print("")
 
-    again = input("Again (Y/n)? ")
+    again = input("Again ((default) Y/n)? ")
 
     if again == "Y" or again == "y" or again == "":
         print("")
@@ -60,5 +64,5 @@ while True:
     elif again == "N" or again == "n":
         break
     else:
-        print("Invalid input, exiting")
+        print("Invalid input")
         break
